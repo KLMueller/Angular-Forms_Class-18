@@ -1,7 +1,5 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { isFunctionDeclaration } from 'typescript';
 
 @Component({
   selector: 'app-book-form-template',
