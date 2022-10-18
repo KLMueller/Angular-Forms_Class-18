@@ -4,7 +4,7 @@ ___write your experience of the different approaches.___
 I found the approaches to be very similar. The template-driven approach does seem to be quicker in some areas with less code to be written, but the Reactive-driven form was still managable to the point that I could see myself using it again. The Reactive portion took me less time to comlpete but that's because I had learned so much through trial and error with the template section. I liked the learning approach of doing the two side-by-side, both within the assignment tasks and visually on the server.
 
  ____Write about what you find easy and what is challenging about each._____
-I was struggle in the template section with getting interpolation to work correctly, so I took Max's approach of using the View Child and creating an array of object items in the TS file and that seemed to resolve the interpolation problem. With the Reactive section, I got hung up on using "valid" instead of "invalid" with the Validators but it was an error that was quickly found and resolved.
+I was struggling in the template section with getting interpolation to work correctly, so I took Max's approach of using the View Child and creating an array of object items in the TS file and that seemed to resolve the interpolation problem. With the Reactive section, I got hung up on using "valid" instead of "invalid" with the Validators but it was an error that was quickly found and resolved.
 
 __Define the "Template-Driven-Approach" and the "Reactive-Driven-Approach".___
 ___Explain their differences and what each excel at doing._______
