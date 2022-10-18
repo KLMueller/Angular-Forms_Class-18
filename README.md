@@ -9,7 +9,7 @@ I was struggle in the template section with getting interpolation to work correc
 __Define the "Template-Driven-Approach" and the "Reactive-Driven-Approach".___
 ___Explain their differences and what each excel at doing._______
 
-The Template-Driven forms are model-driven by directives in the template. It is used with simpler forms. With this approach, Angular infers the Form Object form the DOM.
+The Template-Driven forms are model-driven by directives in the template. It is used with simpler forms. With this approach, Angular infers the Form Object from the DOM.
 
 The Reactive-Driven-Approach is model-driven and handles inout that changes over time and that can be accessed synchronously. This approach is used with more complex forms and gives the programmer more control over how the form performs.  With this approach, the form is created programatically and synchronized with the DOM. It is easier to test large projects than template-driven becuase the data is consistent and predicatble.
 
