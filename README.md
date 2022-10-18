@@ -1,7 +1,7 @@
 # Class 18 - Forms
 
 ___write your experience of the different approaches.___
-I found the approaches to be very similar. The template-driven approach does seem to be quicker in some areas with less code to be written, but the Reactive-driven form was still managable to the point that I could see myself using it again. The Reactive portion took me less time to comlpete but that's because I had learned so much through trial and error with the template section. I liked the learning approach of doing the two side-by-side, both within the assignment tasks and visually on the server.
+I found the approaches to be very similar. The template-driven approach does seem to be quicker in some areas with less code to be written, but the Reactive-driven form was still managable to the point that I could see myself using it again. The Reactive portion took me less time to complete but that's because I had learned so much through trial and error with the template section. I liked the learning approach of doing the two side-by-side, both within the assignment tasks and visually on the server.
 
  ____Write about what you find easy and what is challenging about each._____
 I was struggling in the template section with getting interpolation to work correctly, so I took Max's approach of using the View Child and creating an array of object items in the TS file and that seemed to resolve the interpolation problem. With the Reactive section, I got hung up on using "valid" instead of "invalid" with the Validators but it was an error that was quickly found and resolved.
@@ -11,7 +11,7 @@ ___Explain their differences and what each excel at doing._______
 
 The Template-Driven forms are model-driven by directives in the template. It is used with simpler forms. With this approach, Angular infers the Form Object from the DOM.
 
-The Reactive-Driven-Approach is model-driven and handles inout that changes over time and that can be accessed synchronously. This approach is used with more complex forms and gives the programmer more control over how the form performs.  With this approach, the form is created programatically and synchronized with the DOM. It is easier to test large projects than template-driven becuase the data is consistent and predicatble.
+The Reactive-Driven-Approach is model-driven and handles input that changes over time and that can be accessed synchronously. This approach is used with more complex forms and gives the programmer more control over how the form performs.  With this approach, the form is created programatically and synchronized with the DOM. It is easier to test large projects than template-driven because the data is consistent and predicatble.
 
 
 ## How to Start
