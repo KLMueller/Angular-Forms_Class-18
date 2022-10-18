@@ -1,22 +1,69 @@
-<!-- ~~~ !TEMPLATE DRIVEN APPROACH! ~~~ -->
-<form>
+<!-- ~~~ !REACTIVE DRIVEN APPROACH! ~~~ -->
+<!-- Line #1 (as forked) was originally mis-titled as TEMPLATE DRIVEN -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<form [formGroup]="reactiveBookForm" (ngSubmit)="onSubmit()">
+  <!--tells Angular to use the FormGroup that I created via property binding -->
   <div id="book-data">
     <!-- Title -->
+    
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="text" id="title" name="title" class="form-control" />
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="form-control"
+        formControlName="title" 
+      <!--formControlName directive connects to ngOnInIt control via passing a string (this note will run error here in VSC, move out of input tag to remove error) -->
+      />
+      <span
+        *ngIf="
+          !reactiveBookForm.get('title').valid &&
+          reactiveBookForm.get('title').touched
+        "
+        class="help-block text-danger"
+        >Please enter a valid title.</span
+      >
     </div>
 
     <!-- Author -->
     <div class="form-group">
       <label for="author">Author</label>
-      <input type="text" id="author" name="author" class="form-control" />
+      <input
+        type="text"
+        id="author"
+        name="author"
+        class="form-control"
+        formControlName="author"
+      />
+      <span
+        *ngIf="
+          !reactiveBookForm.get('author').valid &&
+          reactiveBookForm.get('author').touched
+        "
+        class="help-block text-danger"
+        >Please enter a valid author.</span
+      >
     </div>
 
     <!-- Genre -->
     <div class="form-group">
       <label for="genre">Genre</label>
-      <select id="genre" name="genre" class="form-control">
+      <select
+        id="genre"
+        name="genre"
+        class="form-control"
+        formControlName="genre"
+      >
+        <span
+          *ngIf="
+            !reactiveBookForm.get('genre').valid &&
+            reactiveBookForm.get('genre').touched
+          "
+          class="help-block text-danger"
+          >Please select a genre.</span
+        >
         <option value="mystery">Mystery</option>
         <option value="self-help">Self-Help</option>
         <option value="fantasy">Fantasy</option>
@@ -37,7 +84,29 @@
       <label for="false">False</label>
     </div>
 
+    <!-- Adds error message if form is invalid and touched upon submit or if input is removed. -->
+    <span
+      *ngIf="!reactiveBookForm.valid && reactiveBookForm.touched"
+      class="help-block text-danger"
+      >Please complete the entire form.</span
+    >
+
     <!-- Submit Button -->
-    <button class="btn btn-warning" type="submit">Submit</button>
+    <button
+      class="btn btn-warning"
+      type="submit"
+      [disabled]="!reactiveBookForm.valid"
+   >
+      Submit
+    </button>
   </div>
 </form>
+<!-- Displays user input below button -->
+<div class="row mt-4" *ngIf="wasSubmitted">
+  <div class="col-xs-12">
+    <h3>Thank you for submitting:</h3>
+    <p>Title: {{ reactiveBookForm.value.title }}</p>
+    <p>Author: {{ reactiveBookForm.value.author }}</p>
+    <p>Genre: {{ reactiveBookForm.value.genre }}</p>
+  </div>
+</div>
