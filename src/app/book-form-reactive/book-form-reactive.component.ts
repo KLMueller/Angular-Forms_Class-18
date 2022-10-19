@@ -9,6 +9,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class BookFormReactiveComponent implements OnInit {
   reactiveBookForm: FormGroup;
   wasSubmitted = false;
+  inputDetails = {
+    title: '',
+    author: '',
+    genre: '',
+  };
 
   constructor() {}
 
@@ -23,6 +28,9 @@ export class BookFormReactiveComponent implements OnInit {
   onSubmit() {
     console.log(this.reactiveBookForm);
     this.wasSubmitted = true;
-    this.reactiveBookForm.reset;
+    this.inputDetails.title = this.reactiveBookForm.value.title;
+    this.inputDetails.author = this.reactiveBookForm.value.author;
+    this.inputDetails.genre = this.reactiveBookForm.value.genre;
+    this.reactiveBookForm.reset();
   }
 }
